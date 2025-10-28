@@ -27,7 +27,7 @@ export function JewishMuseum() {
       title: 'Jewish Museum Promotional Video',
       year: '2023',
       location: 'Media & Outreach',
-      description: 'Planned and produced a promotional video for the museum\'s new space to update museum visitors and donors. https://www.youtube.com/watch?v=ny5VUeFSGLQ',
+      description: 'Planned and produced a promotional video for the museum\'s new space to update museum visitors and donors.',
       image: 'https://images.unsplash.com/photo-1720052473937-858c68dd0783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqZXdpc2glMjBzeW5hZ29ndWUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzMDU0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Media',
     },
@@ -76,12 +76,27 @@ export function JewishMuseum() {
               >
                 <div className={index % 2 === 1 ? 'md:col-start-2' : ''}>
                   <div className="relative aspect-[4/3] overflow-hidden group">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    {project.title === 'Jewish Museum Promotional Video' ? (
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/ny5VUeFSGLQ"
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <ImageWithFallback
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}>
