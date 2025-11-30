@@ -1,43 +1,27 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from './ui/dialog';
+import { X } from 'lucide-react';
 
 export function FilmPhotography() {
-  const filmSeries = [
-    {
-      id: 1,
-      title: 'Grain & Memory',
-      camera: 'Leica M6',
-      film: 'Kodak Portra 400',
-      year: '2023-2024',
-      description: 'An ongoing series exploring the nostalgia and authenticity of analog photography',
-      images: [
-        'https://images.unsplash.com/photo-1597201846501-5e5ea20ad9e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmFsb2clMjBmaWxtJTIwcGhvdG9ncmFwaHl8ZW58MXx8fHwxNzYwMzA1NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1627932708927-1d71e55fb56e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzNW1tJTIwZmlsbSUyMGdyYWlufGVufDF8fHx8MTc2MDMwNTYzN3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      ],
-    },
-    {
-      id: 2,
-      title: 'Streets in Silver',
-      camera: 'Canon AE-1',
-      film: 'Ilford HP5 Plus',
-      year: '2023',
-      description: 'Black and white street photography capturing the rhythm of urban life',
-      images: [
-        'https://images.unsplash.com/photo-1675335808318-34d89d9d8e57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJlZXQlMjBwaG90b2dyYXBoeSUyMHVyYmFufGVufDF8fHx8MTc2MDI4ODYyM3ww&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1663043188237-01565028db93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudGFyeSUyMHBob3RvZ3JhcGh5fGVufDF8fHx8MTc2MDMwNTU1OXww&ixlib=rb-4.1.0&q=80&w=1080',
-      ],
-    },
-    {
-      id: 3,
-      title: 'Timeless Portraits',
-      camera: 'Hasselblad 500C/M',
-      film: 'Kodak Tri-X 400',
-      year: '2022-2024',
-      description: 'Medium format portraits exploring character and contemplation',
-      images: [
-        'https://images.unsplash.com/photo-1544124094-8aea0374da93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5fGVufDF8fHx8MTc2MDI0MTU3Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1758613654186-6ce234bf94ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHklMjBzdHVkaW98ZW58MXx8fHwxNzYwMjY0MzU4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      ],
-    },
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const photos = [
+    '/images/andrewsmom.jpg',
+    '/images/Badass.jpg',
+    '/images/bed.jpg',
+    '/images/biking.jpg',
+    '/images/boat.jpg',
+    '/images/Bridge.jpg',
+    '/images/Cow.jpg',
+    '/images/Hilary.jpg',
+    '/images/houses.jpg',
+    '/images/kids.jpg',
+    '/images/reflection.jpg',
+    '/images/shower.jpg',
+    '/images/SmallRV.jpg',
+    '/images/trees.jpg',
+    '/images/waves.jpg',
   ];
 
   return (
@@ -76,56 +60,51 @@ export function FilmPhotography() {
         </div>
       </section>
 
-      {/* Film Series */}
+      {/* Photo Gallery Grid */}
       <section className="py-24 px-6 bg-black">
-        <div className="container mx-auto max-w-7xl space-y-32">
-          {filmSeries.map((series, index) => (
-            <div key={series.id}>
-              <div className="grid md:grid-cols-2 gap-12 mb-12">
-                <div>
-                  <h3 className="serif-font text-4xl mb-6">{series.title}</h3>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3">
-                      <span className="text-white/40 min-w-[80px]">Camera:</span>
-                      <span className="text-white/80">{series.camera}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-white/40 min-w-[80px]">Film:</span>
-                      <span className="text-white/80">{series.film}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-white/40 min-w-[80px]">Years:</span>
-                      <span className="text-white/80">{series.year}</span>
-                    </div>
-                  </div>
-                  <p className="text-lg text-white/60 leading-relaxed">
-                    {series.description}
-                  </p>
-                </div>
-                <div className="relative aspect-[4/5]">
-                  <ImageWithFallback
-                    src={series.images[0]}
-                    alt={`${series.title} - Image 1`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="serif-font text-4xl mb-16 text-center">Selected Work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {photos.map((photo, index) => (
+              <div 
+                key={index}
+                className="relative aspect-[3/4] overflow-hidden group cursor-pointer"
+                onClick={() => setSelectedImage(photo)}
+              >
+                <ImageWithFallback
+                  src={photo}
+                  alt={`Film Photography ${index + 1}`}
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                {series.images.slice(1).map((image, imgIndex) => (
-                  <div key={imgIndex} className="relative aspect-[3/4] overflow-hidden group">
-                    <ImageWithFallback
-                      src={image}
-                      alt={`${series.title} - Image ${imgIndex + 2}`}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-white/10">
+          <DialogTitle className="sr-only">Film Photography Viewer</DialogTitle>
+          <DialogDescription className="sr-only">Full-size view of selected photograph</DialogDescription>
+          <button 
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 z-50 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+          {selectedImage && (
+            <div className="flex items-center justify-center w-full h-full p-8">
+              <img 
+                src={selectedImage}
+                alt="Selected photograph"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Camera Collection */}
       <section className="py-24 px-6 bg-zinc-950">
