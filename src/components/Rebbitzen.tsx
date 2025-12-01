@@ -5,7 +5,7 @@ const profiles = [
     id: 'chanie',
     name: 'Chanie Rosenfeld',
     location: 'Chabad Esra, Zürich, Switzerland',
-    image: '/images/Zurich_ChanieRosenfeld.png',
+    image: '/images/Zurich_ChanieRosenfeld.jpg',
     blurb:
       'I am the Rebbezin in Zurich’s orthodox movement, Chabad Esra. My role is multifaceted. I teach women’s courses on the Torah, holidays, the soul and the afterlife. I organize women\'s events and cook Shabbat meals at our Chabad Center. I run our Hebrew school and teach girls at a local Jewish day-school. My home is welcome to all guests, locals, and tourists. People with family members in nearby hospitals often come to our home. My husband and I see our role in providing, support and guidance. To those outside of our circle, we convey the beauty of Judaism.'
   },
@@ -13,7 +13,7 @@ const profiles = [
     id: 'sylvia',
     name: 'Sylvia Dym',
     location: 'Jüdische Liberale Gemeinde Or Chadasch, Zürich, Switzerland',
-    image: '/images/Sylvia_Dym.png',
+    image: '/images/Sylvia_Dym.jpg',
     blurb:
       'I have been serving my community since 2008, the JLG Or Chadasch in Zurich. I teach Bar and Bat Mitzvah students, many of whom I have known since they were my pupils in preschool. I also teach older congregants, among others, to read from the Torah and Haftorah. I work alongside my husband in many ways.'
   },
@@ -21,7 +21,7 @@ const profiles = [
     id: 'michelle',
     name: 'Michelle Shitrit',
     location: 'Wife of Rosh Kehillah, Lucerne Switzerland',
-    image: '/images/Lucerne_MichelleShitrit.png',
+    image: '/images/Lucerne_MichelleShitrit.jpg',
     blurb:
       'My husband is Rosh Kehilah, president of the Jewish congregation, in Lucerne. He and I work behind-the-scenes, helping run the Yeshiva, the men’s school, the cemetery and synagogue. I take care of the bookkeeping, the administration, I organize events and answer phone calls for the cemetery.'
   }
