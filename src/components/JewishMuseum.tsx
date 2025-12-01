@@ -7,25 +7,22 @@ export function JewishMuseum() {
     {
       id: 1,
       title: 'The Rebbitzen Project',
-      year: '2023',
       location: 'Main Exhibition Hall',
       description: "Since so much of the museum's collection represents the duties of men and boys, yet so much of daily life is made possible by women, I took on the responsibility of showing a holistic picture of Jewish life. Exhibited in their permanent collection alongside objects pertaining to Rabbis, The Jewish Museum will showcase my portraits of Rebbitzins and the blurb created describing their personal role and contributions to their community.",
-      image: 'https://images.unsplash.com/photo-1562064729-6c3f058785fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBleGhpYml0aW9ufGVufDF8fHx8MTc2MDI0NjI4Nnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/RebbitzenProject.jpg',
       category: 'Project',
     },
     {
       id: 2,
       title: 'Forgotten Jewish Villages of Alsace',
-      year: '2023',
       location: 'Research & Archive',
       description: 'Together with two specialists in the history of rural Judaism, my time at the museum was spent documenting the traces of Jewish rural life in the 18th and 19th centuries in Alsace.',
-      image: 'https://images.unsplash.com/photo-1594165808659-fe20f963ab53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwYXJ0aWZhY3RzfGVufDF8fHx8MTc2MDMwNTU1OHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/images/forgottenvillages.png',
       category: 'Research',
     },
     {
       id: 3,
       title: 'Jewish Museum Promotional Video',
-      year: '2023',
       location: 'Media & Outreach',
       description: 'Planned and produced a promotional video for the museum\'s new space to update museum visitors and donors.',
       image: 'https://images.unsplash.com/photo-1720052473937-858c68dd0783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqZXdpc2glMjBzeW5hZ29ndWUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzMDU0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -39,24 +36,22 @@ export function JewishMuseum() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1657920863237-8805ecf70ef3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjAyODc2MDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/images/museumcover.png"
             alt="Jewish Museum"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center px-6">
-          <p className="text-white/60 tracking-widest mb-4">INSTITUTIONAL COLLABORATION</p>
           <h1 className="serif-font text-5xl md:text-7xl mb-6">Jewish Museum of Switzerland</h1>
           <p className="text-lg text-white/70 max-w-3xl mx-auto">
-            A multi-year collaboration documenting exhibitions, collections, and community stories
           </p>
         </div>
       </section>
 
       {/* Introduction */}
       <section className="py-16 px-6 bg-zinc-950">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-4.5xl text-center">
           <p className="text-lg text-white/70 leading-relaxed">
             Besides carrying out regular internship work, photographing the architecture, events and items in the collection, Aline Chalfin took on three projects which required considerable organizational and social skills:
           </p>
@@ -106,10 +101,6 @@ export function JewishMuseum() {
                   <h3 className="serif-font text-4xl mb-4">{project.title}</h3>
                   <div className="flex items-center gap-6 text-white/60 mb-6">
                     <div className="flex items-center gap-2">
-                      <Calendar size={16} />
-                      <span>{project.year}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
                       <MapPin size={16} />
                       <span>{project.location}</span>
                     </div>
@@ -136,26 +127,7 @@ export function JewishMuseum() {
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="py-24 px-6 bg-zinc-950">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="serif-font text-4xl mb-16 text-center">Project Impact</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="serif-font text-5xl mb-4">50+</div>
-              <p className="text-white/60">Hours of Documentary Footage</p>
-            </div>
-            <div className="text-center">
-              <div className="serif-font text-5xl mb-4">6</div>
-              <p className="text-white/60">Major Exhibition Projects</p>
-            </div>
-            <div className="text-center">
-              <div className="serif-font text-5xl mb-4">200+</div>
-              <p className="text-white/60">Stories Preserved</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Testimonial */}
       <section className="py-24 px-6 bg-black">

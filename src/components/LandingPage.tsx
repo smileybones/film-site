@@ -28,7 +28,7 @@ export function LandingPage() {
             Productions
           </p>
           <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12">
-            Cinematic storytelling through the lens of artistic vision
+             Bubbe always told us to never let the truth get in the way of a good story.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -52,52 +52,7 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* About Aline Frances Section */}
-      <section className="py-24 px-6 bg-zinc-950">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1512939755946-501bd2c2540d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwZGlyZWN0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjAzMDU0MDh8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Aline Frances"
-                className="w-full h-[600px] object-cover"
-              />
-            </div>
-            <div>
-              <p className="text-white/40 tracking-widest mb-4">DIRECTOR • CINEMATOGRAPHER</p>
-              <h2 className="serif-font text-5xl mb-6">Aline Frances</h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
-                <p>
-                  Aline Frances is a visionary filmmaker and cinematographer specializing in
-                  compelling visual narratives that bridge cultural heritage and contemporary
-                  storytelling.
-                </p>
-                <p>
-                  With extensive experience in documentary filmmaking, commercial production,
-                  and artistic photography, Aline brings a unique perspective to every project,
-                  combining technical excellence with profound emotional depth.
-                </p>
-                <p>
-                  Her work has been featured in notable institutions including the Jewish Museum
-                  of Switzerland, and her film "The Golem" has garnered critical acclaim for its
-                  innovative approach to mythological storytelling.
-                </p>
-                <p>
-                  Based between multiple creative hubs, Aline continues to push the boundaries
-                  of visual media, creating work that resonates with audiences worldwide.
-                </p>
-              </div>
-              <Link
-                to="/contact"
-                className="inline-block mt-8 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition-colors tracking-wider"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Featured Projects Preview */}
       <section className="py-24 px-6 bg-black">
         <div className="container mx-auto max-w-7xl">
@@ -105,7 +60,7 @@ export function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Link to="/cinematography" className="group relative overflow-hidden aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1758851088217-df00ca346e24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaW5lbWF0b2dyYXBoeSUyMGZpbG0lMjByZWVsfGVufDF8fHx8MTc2MDMwNTQwNnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/cinematography.jpg"
                 alt="Cinematography"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -127,7 +82,7 @@ export function LandingPage() {
 
             <Link to="/jewish-museum" className="group relative overflow-hidden aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1562064729-6c3f058785fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBleGhpYml0aW9ufGVufDF8fHx8MTc2MDI0NjI4Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/croppedmuseum.jpg"
                 alt="Jewish Museum"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
