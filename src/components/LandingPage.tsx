@@ -60,7 +60,7 @@ export function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Link to="/film-photography" className="group relative overflow-hidden aspect-[4/5]">
               <img
-                src="/images/andrewsmom.jpg"
+                src="/images/Hilary.jpg"
                 alt="Film Photography"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
